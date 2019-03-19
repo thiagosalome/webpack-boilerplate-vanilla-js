@@ -1,0 +1,11 @@
+@mixin button-source($background-color: $gray-9a, $padding-vertical: 5px, $padding-horizontal: 15px) {
+  background-color: $background-color;
+  border: none;
+  padding: $padding-vertical $padding-horizontal;
+  transition: all 0.3s ease;
+
+  &:hover{
+    background:darken($background-color, 8%);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,27 @@
+$props-utilities: (
+  "m": "margin",
+  "p": "padding"
+);
+
+$props-sizes: (0, 4, 8, 16, 24, 32, 48, 64, 72, 96, 112);
+@each $nameProp, $prop in $props-utilities {
+  @each $size in $props-sizes {
+    .#{$nameProp}-#{$size}   { #{$prop}: $size#{px}; }
+    .#{$nameProp}t-#{$size} { #{$prop}-top: $size#{px}; }
+    .#{$nameProp}r-#{$size} { #{$prop}-right: $size#{px}; }
+    .#{$nameProp}b-#{$size} { #{$prop}-bottom: $size#{px}; }
+    .#{$nameProp}l-#{$size} { #{$prop}-left: $size#{px}; }
+  }
+}
+
+@include breakpoint('sm'){
+  @each $nameProp, $prop in $props-utilities {
+    @each $size in $props-sizes {
+      .#{$nameProp}-#{$size}-sm   { #{$prop}: $size#{px}; }
+      .#{$nameProp}t-#{$size}-sm { #{$prop}-top: $size#{px}; }
+      .#{$nameProp}r-#{$size}-sm { #{$prop}-right: $size#{px}; }
+      .#{$nameProp}b-#{$size}-sm { #{$prop}-bottom: $size#{px}; }
+      .#{$nameProp}l-#{$size}-sm { #{$prop}-left: $size#{px}; }
+    }
+  }
+}

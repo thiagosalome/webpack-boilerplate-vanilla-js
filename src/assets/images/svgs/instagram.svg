@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <linearGradient id="a" x1="40.102%" x2="26.562%" y1="8.446%" y2="89.62%">
+            <stop offset="0%" stop-color="#603DED"/>
+            <stop offset="56.133%" stop-color="#ED2F5D"/>
+            <stop offset="100%" stop-color="#EAB933"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(.042)">
+        <ellipse cx="11.894" cy="11.915" fill="url(#a)" fill-rule="nonzero" rx="11.894" ry="11.915"/>
+        <path fill="#FFF" d="M8.602 6.077a2.541 2.541 0 0 0-2.535 2.54v6.414c0 1.4 1.137 2.54 2.535 2.54h6.403a2.541 2.541 0 0 0 2.536-2.54V8.617c0-1.4-1.138-2.54-2.536-2.54H8.602zm6.403 12.771H8.602a3.819 3.819 0 0 1-3.81-3.817V8.617A3.819 3.819 0 0 1 8.602 4.8h6.403a3.819 3.819 0 0 1 3.81 3.817v6.414a3.819 3.819 0 0 1-3.81 3.817z"/>
+        <path fill="#FFF" d="M11.81 9.277a2.555 2.555 0 0 0 0 5.109 2.555 2.555 0 0 0 0-5.109zm0 6.386a3.832 3.832 0 0 1 0-7.663 3.832 3.832 0 0 1 0 7.663zM15.012 8.477a.64.64 0 0 1 0-1.277.64.64 0 0 1 0 1.277z"/>
+    </g>
+</svg>

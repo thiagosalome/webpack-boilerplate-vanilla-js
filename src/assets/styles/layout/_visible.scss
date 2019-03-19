@@ -1,0 +1,19 @@
+@media (max-width: 767px) {
+// @include breakpoint('xs'){
+  .hidden-xs { display: none !important; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  // @include breakpoint('sm'){
+    .hidden-sm { display: none !important; }
+  }
+  
+@media (min-width: 1024px) and (max-width: 1279px) {
+  // @include breakpoint('md'){
+    .hidden-md { display: none !important; }
+  }
+  
+@media (min-width: 1280px) {
+// @include breakpoint('lg'){
+  .hidden-lg { display: none !important; }
+}

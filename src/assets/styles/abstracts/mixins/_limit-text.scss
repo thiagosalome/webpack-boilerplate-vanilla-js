@@ -1,0 +1,11 @@
+@mixin limit-text($font-size: 16px, $line-qtd: 3, $line-height: 1.2) {
+  display: -webkit-box;
+  max-width: 100%;
+  // max-height: calc(#{$font-size} * #{$line-qtd} * #{$line-height});
+  height: calc(#{$font-size} * #{$line-qtd} * #{$line-height});
+  margin: 0 auto;
+  -webkit-line-clamp: $line-qtd;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

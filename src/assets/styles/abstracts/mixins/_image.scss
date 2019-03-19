@@ -1,0 +1,27 @@
+@mixin image-source($height: 180px, $width: 100%, $inner-shadow: 'false') {
+  overflow: hidden;
+  height: $height;
+  width: $width;
+  position: relative;
+
+  @if $inner-shadow == 'true' {
+    &::before{
+      display: block;
+      content: '';
+      position: absolute;
+      background-color: rgba(0,0,0,0.5);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+    }
+  }
+
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+  }
+}

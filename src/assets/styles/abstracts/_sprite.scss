@@ -1,0 +1,62 @@
+%svg-common {
+  background: url("/assets/images/sprite.1.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.svg-facebook-round {
+  @extend %svg-common;
+  background-size: 208.33333333333334%;
+  background-position: 0 100%;
+  width: 24px;
+  height: 24px;
+}
+%svg-facebook-round{
+  background-size: 208.33333333333334%;
+  background-position: 0 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.svg-instagram {
+  @extend %svg-common;
+  background-size: 208.33333333333334%;
+  background-position: 92.3076923076923% 100%;
+  width: 24px;
+  height: 24px;
+}
+%svg-instagram{
+  background-size: 208.33333333333334%;
+  background-position: 92.3076923076923% 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.svg-twitter-round {
+  @extend %svg-common;
+  background-size: 200%;
+  background-position: 0 0;
+  width: 25px;
+  height: 24px;
+}
+%svg-twitter-round{
+  background-size: 200%;
+  background-position: 0 0;
+  width: 25px;
+  height: 24px;
+}
+
+.svg-youtube {
+  @extend %svg-common;
+  background-size: 200%;
+  background-position: 100% 0;
+  width: 25px;
+  height: 24px;
+}
+%svg-youtube{
+  background-size: 200%;
+  background-position: 100% 0;
+  width: 25px;
+  height: 24px;
+}
+

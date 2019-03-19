@@ -1,0 +1,65 @@
+
+/*
+References: https://codepen.io/flpwgr/pen/qbMJaY
+*/
+@mixin make-container() {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 ($grid-gutter-width / 2);
+  margin: 0 auto;
+}
+  
+@mixin make-row() {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: ($grid-gutter-width / -2);
+  margin-left: ($grid-gutter-width / -2);
+  justify-content: center;
+}
+  
+@mixin make-col($size, $columns) {
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+  
+@mixin make-col-fixed($size, $columns) {
+  flex: 0 1 ($size / $columns) * $grid-container-max;
+  padding: 0 ($grid-gutter-width / 2);
+  box-sizing: border-box;
+}
+  
+@mixin make-grid-columns($columns, $gutter){
+  .col{
+    flex: 1;
+    padding: 0 ($grid-gutter-width / 2);
+    box-sizing: border-box;
+  }
+  
+  @for $i from 1 through $columns {
+    
+    @include breakpoint('lg'){
+      .lg-#{$i} {
+        @include make-col($i, $columns);
+      }
+    }
+    @include breakpoint('md'){
+      .md-#{$i} {
+        @include make-col($i, $columns);
+      }
+    }
+    @include breakpoint('sm'){
+      .sm-#{$i} {
+        @include make-col($i, $columns);
+      }
+    }
+    @include breakpoint('xs'){
+      .xs-#{$i} {
+        @include make-col($i, $columns);
+      }
+    }
+
+    .col-fixed-#{$i} {
+      @include make-col-fixed($i, $columns);
+    }
+  }
+}

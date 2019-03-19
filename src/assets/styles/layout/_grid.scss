@@ -1,0 +1,31 @@
+/*
+  Reference:  https://getbootstrap.com/docs/4.0/layout/grid/
+*/
+
+.container {
+  @include make-container();
+
+  @include breakpoint('lg'){
+    max-width: $grid-container-max;
+  }
+  
+  @include breakpoint('md'){
+    max-width: 1024px;
+  }
+  
+  @include breakpoint('sm'){
+    max-width: 768px;
+  }
+
+  @include breakpoint('xs'){
+    max-width: 100%;
+  }
+}
+
+@include make-grid-columns($grid-columns, $grid-gutter-width);
+
+// Row
+.row {
+  @include make-row();
+}
+
