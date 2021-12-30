@@ -2,24 +2,21 @@ const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const miniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const tagBuildCss = require("./package.json")['tag-build-css'];
-const tagBuildSprite = require("./package.json")['tag-build-sprite'];
-
 module.exports = {
   entry: {
     home: [
-      path.resolve(__dirname, './src/assets/js/home.js'),
-      path.resolve(__dirname, "./src/assets/styles/home.scss")
+      path.resolve(__dirname, './src/scripts/app.js'),
+      path.resolve(__dirname, "./src/styles/app.scss")
     ]
   },
   plugins : [
     new htmlWebpackPlugin({
-      template : path.resolve(__dirname, "./src/assets/views/index.pug"),
+      template : path.resolve(__dirname, "./src/views/index.pug"),
       title : "Site Title",
       chunks : ["home"]
     }),
     new miniCssExtractPlugin({
-      filename : `./assets/styles/[name].${tagBuildSprite}.${tagBuildCss}.min.css`
+      filename : `./src/styles/[name].${tagBuildSprite}.${tagBuildCss}.min.css`
     })
   ],
   module: {
@@ -57,7 +54,7 @@ module.exports = {
         use : {
           loader : "file-loader",
           options : {
-            name : path.resolve(__dirname, 'src/assets/images/[name].[ext]')
+            name : path.resolve(__dirname, 'src/images/[name].[ext]')
           }
         }
       }
