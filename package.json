@@ -1,7 +1,7 @@
 {
   "name": "webpack-boilerplate-vanilla-js",
-  "version": "1.0.0",
-  "description": "Boilerplate for modern javascript development using webpack 4",
+  "version": "2.0.0",
+  "description": "Boilerplate for modern javascript development using webpack 5",
   "author": "Thiago Salomé",
   "license": "ISC",
   "repository": {
@@ -9,8 +9,8 @@
     "url": "https://github.com/thiagosalome/webpack-boilerplate-vanilla-js"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "start": "webpack-dev-server --config ./config/webpack.dev.js",
+    "build": "webpack --config ./config/webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
