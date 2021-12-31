@@ -1,6 +1,5 @@
-const component = (function(){
-
+const component = (function () {
 
 }());
 
-export default component
+export default component;

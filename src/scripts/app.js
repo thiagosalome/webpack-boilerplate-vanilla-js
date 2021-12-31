@@ -1,3 +1,3 @@
-import "./utils/polyfill"
-import "./components/component";
-import "./vendors/vendor";
+import './utils/polyfill';
+import './components/component';
+import './vendors/vendor';
