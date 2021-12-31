@@ -1,5 +1,5 @@
-const component = (function () {
+const component = (() => {
 
-}());
+})();
 
 export default component;
