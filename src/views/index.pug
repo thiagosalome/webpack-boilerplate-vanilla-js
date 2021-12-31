@@ -1,4 +1,14 @@
 extend ./base/base
 
 block content
-  h1 Hello World
+  include ./components/button
+  
+  div.content
+    .content__icons
+      img(src="../images/icons/pug.png", alt="Pug" title="Pug")
+      img(src="../images/icons/sass.png", alt="Sass" title="Sass")
+      img(src="../images/icons/javascript.png", alt="Javascript" title="Javascript")
+      img(src="../images/icons/webpack.png", alt="Webpack" title="Webpack")
+    +button('Clique aqui')
+
+  

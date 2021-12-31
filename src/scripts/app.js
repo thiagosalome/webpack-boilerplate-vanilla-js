@@ -1,3 +1,3 @@
 import './utils/polyfill';
-import './components/component';
+import './components/button';
 import './vendors/vendor';

@@ -2,13 +2,9 @@
 @import "./base/reset";
 @import "./base/typograph";
 
-
 // Abstracts
-@import "./abstracts/mixins/mixins";
-@import "./abstracts/global";
-@import "./abstracts/sprite";
+@import "./abstracts/mixins";
 @import "./abstracts/variables";
-
 
 // Layout
 @import "./layout/header";
@@ -18,7 +14,23 @@
 @import "./layout/visible";
 
 // Components
-@import "./components/component";
+@import "./components/button";
 
 // Vendors
 @import "./vendors/vendor";
+
+.content {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 20px;
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 16px;
+  }
+}
