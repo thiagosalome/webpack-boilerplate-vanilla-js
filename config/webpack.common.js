@@ -11,14 +11,23 @@ module.exports = {
       path.resolve('./src/styles/app.scss'),
     ],
   },
+  resolve: {
+    alias: {
+      images: path.resolve('./src/images/'),
+      scripts: path.resolve('./src/scripts/'),
+      services: path.resolve('./src/services/'),
+      styles: path.resolve('./src/styles/'),
+      views: path.resolve('./src/views/'),
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve('./src/views/index.pug'),
-      title: 'Site Title',
+      title: 'Webpack Boilerplate Vanilla JS',
       chunks: ['app'],
     }),
     new MiniCssExtractPlugin({
-      filename: './src/styles/app.min.css',
+      filename: './styles/app.min.css',
     }),
   ],
   module: {
@@ -56,7 +65,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: path.resolve(__dirname, 'src/images/[name].[ext]'),
+            name: path.resolve('src/images/[name].[ext]'),
           },
         },
       },

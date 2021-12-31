@@ -2,7 +2,7 @@ const button = (() => {
   const buttonElement = document.querySelector('.js-button');
 
   buttonElement.addEventListener('click', () => {
-    alert('Hello World');
+    window.open('https://github.com/thiagosalome/webpack-boilerplate-vanilla-js');
   });
 })();
 

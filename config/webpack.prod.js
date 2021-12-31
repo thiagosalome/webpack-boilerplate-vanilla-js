@@ -8,18 +8,21 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
   mode: 'production',
   plugins: [
-    new CleanWebpackPlugin(['build']),
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve('src/images/'),
-        to: path.resolve('build/images'),
-        ignore: ['svgs/*'],
-        cache: true,
-      },
-    ]),
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve('src/images/'),
+          to: path.resolve('build/images'),
+          globOptions: {
+            ignore: ['svgs/*'],
+          },
+        },
+      ],
+    }),
   ],
   output: {
-    filename: 'src/scripts/app.min.js',
+    filename: 'scripts/app.min.js',
     path: path.resolve('build'),
   },
 });
