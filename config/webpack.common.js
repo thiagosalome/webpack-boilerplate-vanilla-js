@@ -1,22 +1,23 @@
 const path = require("path");
-const htmlWebpackPlugin = require("html-webpack-plugin");
-const miniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+require('dotenv-flow').config()
 
 module.exports = {
   entry: {
-    home: [
-      path.resolve(__dirname, './src/scripts/app.js'),
-      path.resolve(__dirname, "./src/styles/app.scss")
+    app: [
+      path.resolve('./src/scripts/app.js'),
+      path.resolve("./src/styles/app.scss")
     ]
   },
   plugins : [
-    new htmlWebpackPlugin({
-      template : path.resolve(__dirname, "./src/views/index.pug"),
+    new HtmlWebpackPlugin({
+      template : path.resolve("./src/views/index.pug"),
       title : "Site Title",
-      chunks : ["home"]
+      chunks : ["app"]
     }),
-    new miniCssExtractPlugin({
-      filename : `./src/styles/[name].${tagBuildSprite}.${tagBuildCss}.min.css`
+    new MiniCssExtractPlugin({
+      filename : `./src/styles/app.min.css`
     })
   ],
   module: {
@@ -33,7 +34,7 @@ module.exports = {
       {
         test : /\.(sa|sc|c)ss$/,
         use : [
-          miniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
           {loader: 'css-loader'},
           {loader: 'postcss-loader'},
           {loader: 'sass-loader'}

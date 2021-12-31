@@ -1,17 +1,17 @@
 const path = require("path");
-const merge = require("webpack-merge");
+const {merge} = require("webpack-merge");
 const common = require("./webpack.common");
-const cleanWebpackPlugin = require("clean-webpack-plugin");
-const copyWebpackPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = merge(common, {
   mode: 'production',
   plugins: [
-    new cleanWebpackPlugin(["build"]),
-    new copyWebpackPlugin([
+    new CleanWebpackPlugin(["build"]),
+    new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, "src/images/"),
-        to: path.resolve(__dirname, 'build/images'),
+        from: path.resolve("src/images/"),
+        to: path.resolve('build/images'),
         ignore: ['svgs/*'],
         cache: true
       }
@@ -19,6 +19,6 @@ module.exports = merge(common, {
   ],
   output: {
     filename : `src/scripts/app.min.js`,
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve('build')
   }
 });
